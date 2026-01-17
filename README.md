@@ -98,6 +98,8 @@ The chatbot reads the following parameters from the URL:
   height="700"
   style="border:1px solid #ccc; border-radius:8px;">
 </iframe>
+```html
+
 5. Configuration
 * Replace URL: Change your-project-name.username.repl.co with your actual Replit webview URL.
 
