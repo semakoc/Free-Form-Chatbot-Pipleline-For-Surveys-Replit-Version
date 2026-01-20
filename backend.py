@@ -63,9 +63,10 @@ def chat():
             "Keep replies short (3–5 sentences), and end with a gentle reflective question."
         )
         messages = [{"role": "system", "content": system_prompt}]
-        all_sessions[session_key] = {"messages": messages, "last_active": now}
+        all_sessions[session_key] = {"messages": messages, "last_active": now, "system_prompt": system_prompt}
 
     messages = all_sessions[session_key]["messages"]
+    system_prompt = all_sessions[session_key].get("system_prompt", messages[0]["content"] if messages and messages[0].get("role") == "system" else "")
 
     # CHANGED: simple reset command for starting conversation
     if user_input.upper() == "START_CONVERSATION":
@@ -95,6 +96,7 @@ def chat():
         "participant_id": participant_id,
         "response_id": response_id,
         "dilemma": dilemma,
+        "system_prompt": system_prompt,
         "user_input": user_input,
         "bot_reply": bot_reply,
     }
@@ -111,6 +113,7 @@ def chat():
                 "participant_id",
                 "response_id",
                 "dilemma",
+                "system_prompt",
                 "user_input",
                 "bot_reply",
             ],
