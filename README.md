@@ -145,7 +145,7 @@ Once you find it, you will replace QID116 in the example code with your dilemma 
 Your iframe must point to the public web URL of your running Replit app.
 1. Open your Replit project.
 2. Click **Run**.
-3. When the app opens in the Replit webview, find the “open in new tab” option (or copy the URL from the webview).
+3. Veiw the running chatbot in the "Preveiw" tab on Replit, found on the top toolbar. Find the “open in new tab” option (or copy the URL from the webview) in the top right corner.
 4. The URL will look like: `https://your-repl-name.username.repl.co`
 You will paste this URL into the iframe src.
 
