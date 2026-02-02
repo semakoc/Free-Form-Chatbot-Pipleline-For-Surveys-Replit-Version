@@ -6,20 +6,29 @@ This repository contains a lightweight, fully self‑contained web chatbot desig
 
 ### 🎯 What This Project Is For
 
-This GitHub repository was created to accompany the professional development session Building Free-Form Data Pipelines for Human-AI Conversations in Surveys, delivered at the SPSP 2026 Annual Convention in Chicago, IL. The project supports the workshop by providing a concrete, runnable example of how free-form human–AI conversations can be embedded in surveys and logged through a flexible data pipeline.
+This GitHub repository was created to accompany the professional development session *Building Free-Form Data Pipelines for Human-AI Conversations in Surveys*, delivered at the SPSP 2026 Annual Convention in Chicago, IL. The project supports the workshop by providing a concrete, runnable example of how free-form human–AI conversations can be embedded in surveys and logged through a flexible data pipeline. It also serves as a take-home guide for implementing similar projects in the future.
 
-**You do not need prior programming experience to follow the workshop or run the demo version of this project.
-**
-The implementation uses a moral reasoning chatbot drawn from Moral Reasoning with AI Chatbots in Naturalistic Conversation: Choices, Perceptions, and Value Alignment as a demonstration case. The moral reasoning task is included to make the data pipeline concrete and interpretable, rather than to present substantive research findings.
+**You do not need prior programming experience to follow the workshop or run the demo version of this project.**
 
 This Replit-based version is designed for education, demonstration, and rapid prototyping. **While Replit offers an accessible environment for workshops and teaching, it is not recommended for formal research data collection involving sensitive participant information.** For production research deployments, we advise using AWS or other secure cloud servers that provide stronger data security, access controls, and compliance support.
 
 ---
-## Section 1: Structure, Tech Stack, Deployment
-### 📂 Project Structure
+
+## 📂 Project Structure
 **Most users only need to interact with backend.py and frontend.html. The other files support setup and logging.**
 
-Project files:
+### Project Overview
+
+The implementation demonstrates a chatbot data pipeline originally developed for *Moral Reasoning with AI Chatbots in Naturalistic Conversation: Choices, Perceptions, and Value Alignment*,  presented in the poster session an Feburary 28, 2026 at the SPSP 2026 Annual Convention in Chicago, IL. Project-specific settings were removed to make the example more accessible and broadly applicable.
+
+In this project, participants completed a three-part online survey in which their responses in the **Part One** determined a `stimuli` variable that was incorporated into the contextual prompt for a subsequent human–AI interaction. In **Part Two**, Participants engaged with an AI chatbot in a naturalistic, free-form conversation, triggered automatically, through the survey platform interface. In **Part Three**, participants answered post-chat questions to conclude the study.
+
+Survey metadata, including `participant_id` and `response_id`, were recorded as part of the chat log and saved to a `chatlog.csv` file, ensuring that each conversation could be reliably linked to the corresponding participant’s survey responses.
+
+**Columns Logged in Chatlog.csv:**
+`timestamp` | `model` | `participant_id` | `response_id` | `stimuli` | `system_prompt`| |`user_input` | `bot_reply`
+
+### Project files:
 
 `backend.py`
 - What it does: Runs the chatbot logic and communicates with the OpenAI API.
@@ -56,7 +65,7 @@ Project files:
 | **Storage** | Local CSV logging (inside Replit) |
 | **Hosting** | Replit (Free tier supported) |
 
-
+## Section 1: Web App Deployment
 ### 🚀 Running the Project on Replit
 
 This project is designed to work out of the box on Replit.
@@ -87,7 +96,7 @@ https://platform.openai.com/settings/organization/api-keys
 Important:
 This API key is not the same as your ChatGPT login. Having access to ChatGPT does not automatically give you an API key.
 Note:
-No credit card is required to create an API key for basic usage.
+No credit card is required to create an API key for basic usage, but you may get a 429 error code for exceeding current data. 
 
 ### Adding the API key in Replit
 1. Go to the Replit sidebar (left side of the workspace).
@@ -178,9 +187,6 @@ Important: The iframe points to the Replit app URL, not to filenames like `front
 
 No database setup is required. All conversations are automatically appended to `chatlog.csv` inside the file tree.
 
-**Columns Logged:**
-`timestamp` | `model` | `participant_id` | `response_id` | `dilemma` | `system_prompt`| |`user_input` | `bot_reply`
-
 **To Access Data:**
 * Open the file directly inside the Replit editor.
 * Download the file for analysis in R, Python, Excel, or Stata.
@@ -193,13 +199,13 @@ Check your `.replit` file. It must contain this exact line:
 ```toml
 run = "python3 backend.py"
 ```
-### 📝Author and Attribution
+## 📝Author and Attribution
 
 This project was developed as part of work associated with the Morality Lab and the SPSP 2026 professional development session _Building Free-Form Data Pipelines for Human-AI_ Conversations in Surveys.
 
 **Authors:**
 
-* Helen H. Zheng
+* Helen Huiting Zheng
 * Sara Haman
 * Sema Koc
 
@@ -215,6 +221,6 @@ This project was developed as part of work associated with the Morality Lab and 
 
 * Zheng, H. H., Haman, S., & Koc, S. (2026, February 27). Building Free-Form Data Pipelines for Human-AI Conversations in Surveys. SPSP 2026 Annual Convention.
 
-### License
+## License
 This project is intended for research and educational use.
 You may remix, adapt, and extend it for academic workshops or studies with appropriate attribution.
