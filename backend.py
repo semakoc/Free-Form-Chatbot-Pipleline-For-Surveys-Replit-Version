@@ -59,7 +59,7 @@ def chat():
     participant_id = data.get("participant_id", "anonymous")
     stimuli = data.get("stimuli", "unknown")
 
-    print(f"{response_id}: {user_input} (Stimuli: {stimuli})")
+    print(f"{response_id}: {user_input} (stimuli: {stimuli})")
 
     session_key = (participant_id, response_id)
     now = time.time()
