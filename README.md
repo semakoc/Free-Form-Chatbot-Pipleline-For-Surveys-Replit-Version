@@ -135,20 +135,20 @@ Notes:
    * If you do not have a participant ID source, you can still run the chatbot using only response_id.
    * The field names matter because the chatbot expects these parameter names.
 
-### Step 2: Put the dilemma text in a question
-The chatbot can also receive a dilemma through the URL parameter `dilemma`.
-1. Add a question that contains the dilemma content (many people use Descriptive Text).
-2. This “dilemma question” should appear before the chatbot question, so participants see the dilemma first.
+### Step 2: Put the stimuli text in a question
+The chatbot can also receive a stimuli through the URL parameter `stimuli`.
+1. Add a question that contains the stimuli content (many people use Descriptive Text).
+2. This “stimuli question” should appear before the chatbot question, so participants see the stimuli first.
 
-Important: Qualtrics will assign that dilemma question an internal ID like QID116. You will use that ID in the iframe code.
+Important: Qualtrics will assign that stimuli question an internal ID like QID116. You will use that ID in the iframe code.
 
-### Step 3:Find the dilemma question ID (the “QID”)
-You need the Qualtrics Question ID for the question that contains the dilemma text.
+### Step 3:Find the stimuli question ID (the “QID”)
+You need the Qualtrics Question ID for the question that contains the stimuli text.
 Common ways to find it:
-* In the survey editor, click the dilemma question and look for its question ID (often visible in the question settings or the browser address bar URL).
+* In the survey editor, click the stimuli question and look for its question ID (often visible in the question settings or the browser address bar URL).
 * Use Qualtrics’ preview link and inspect the page source for QID### (more technical).
 
-Once you find it, you will replace QID116 in the example code with your dilemma question’s actual ID.
+Once you find it, you will replace QID116 in the example code with your stimuli question’s actual ID.
 
 ### Step 4:Get your Replit URL (what the iframe points to)
 Your iframe must point to the public web URL of your running Replit app.
@@ -168,7 +168,7 @@ Important: The iframe points to the Replit app URL, not to filenames like `front
 
 ```html
 <iframe
-  src="https://your-repl-name.username.repl.co/?participant_id=${e://Field/participant_id}&response_id=${e://Field/ResponseID}&dilemma=${q://QID116/ChoiceGroup/SelectedChoices}"
+  src="https://your-repl-name.username.repl.co/?participant_id=${e://Field/participant_id}&response_id=${e://Field/ResponseID}&stimuli=${q://QID116/ChoiceGroup/SelectedChoices}"
   width="100%"
   height="700"
   style="border:1px solid #ccc; border-radius:8px;">
@@ -177,7 +177,7 @@ Important: The iframe points to the Replit app URL, not to filenames like `front
 
 5. Configuration
 * Replace URL: Change your-repl-name.username.repl.co with your actual Replit webview URL.
-* Replace QID: Change QID116 to the specific Qualtrics Question ID that holds the dilemma text.
+* Replace QID: Change QID116 to the specific Qualtrics Question ID that holds the stimuli text.
 
 ***
 
