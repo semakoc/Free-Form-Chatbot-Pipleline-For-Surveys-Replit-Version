@@ -1,4 +1,4 @@
-# === Free-Form Data Pipeline for Human-AI Conversations in Surveys (REPLIT VERSION) ===
+# === MORAL STIMULI CHATBOT (REPLIT VERSION) ===
 # This version has been modified from the AWS deployment
 # (which used EC2, S3, and Cloudflare Tunnels)
 # to run entirely inside Replit using local CSV logging.
@@ -59,7 +59,7 @@ def chat():
     participant_id = data.get("participant_id", "anonymous")
     stimuli = data.get("stimuli", "unknown")
 
-    print(f"{response_id}: {user_input} (stimuli: {stimuli})")
+    print(f"{response_id}: {user_input} (Stimuli: {stimuli})")
 
     session_key = (participant_id, response_id)
     now = time.time()
@@ -69,23 +69,19 @@ def chat():
     if (session_key not in all_sessions
             or now - all_sessions[session_key]["last_active"]
             > SESSION_TIMEOUT_SECONDS):
-       
-        messages = [{
-            "role": "system", 
-            "content": SYSTEM_PROMPT_TEMPLATE
-        }]
-        all_sessions[session_key] = {
-            "messages": messages, 
-            "last_active": now, 
-            "system_prompt": SYSTEM_PROMPT_TEMPLATE
-        }
+        system_prompt = (
+            "You are a nonjudgmental assistant helping the user reflect on this moral stimuli. "
+            "Keep replies short (3–5 sentences), and end with a gentle reflective question."
+        )
+        messages = [{"role": "system", "content": system_prompt}]
+        all_sessions[session_key] = {"messages": messages, "last_active": now, "system_prompt": system_prompt}
 
     messages = all_sessions[session_key]["messages"]
     system_prompt = all_sessions[session_key].get("system_prompt", messages[0]["content"] if messages and messages[0].get("role") == "system" else "")
 
     # CHANGED: simple reset command for starting conversation
     if user_input.upper() == "START_CONVERSATION":
-        user_input = INITIAL_USER_INPUT_TEMPLATE.format(stimuli=stimuli)
+        user_input = f"Help me decide what I should do. {stimuli}"
 
     # GPT response logic (unchanged)
     messages.append({"role": "user", "content": user_input})
