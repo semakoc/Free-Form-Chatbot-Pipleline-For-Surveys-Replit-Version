@@ -55,6 +55,11 @@ Survey metadata, including `participant_id` and `response_id`, were recorded as 
 - Used where: Uploaded to Replit.
 - Notes: This file specifies which Python file to run.
 
+  `Example_Survey.qsf`
+  - What it does: Example Quatrics file can be imported directly
+  - Used where: illustration on the final product
+  - Notes: The webapp connection to the datapipeline may be down at the time you see it 
+
 ### 🛠 Tech Stack
 
 | Component | Technology |
@@ -72,7 +77,7 @@ This project is designed to work out of the box on Replit.
 
 ### Option 1: Remix the Existing Repl (Recommended)
 Use the working replication directly. Click "Remix" to create your own editable copy:
-👉 **[Click here to Remix](https://replit.com/@kocse/moral-alignment-workshop?v=1)**
+👉 **[Click here to Remix]<a href="https://replit.com/@zhenh1/Free-Form-Data-Pipeline-for-Human-AI-Conversations-in-Survey" target="_blank">Link Text</a>**
 
 ### Option 2: Manual Setup
 1. Create a free account at [Replit.com](https://replit.com).
