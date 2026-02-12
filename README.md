@@ -4,6 +4,8 @@
 
 This repository contains a lightweight, fully self‑contained web chatbot pipeline designed to support natrualistic human-AI conversation research. It uses OpenAI’s `gpt-4o-mini` model for conversation and logs all interactions locally to a CSV file for later analysis.
 
+---
+
 ## 📚 Documentation Directory
 The documentation linked 
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/1.-Project-Structure" target="_blank">Section 1: Project Structure</a>
@@ -12,7 +14,9 @@ The documentation linked
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/4.-Embedding-in-Qualtrics" target="_blank">Section 4: Logs & Troubleshooting</a>
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/5.-Logs-&-Troubleshooting" target="_blank">Section 5: Extending this code to AWS</a>
 
-### 🎯 What This Project Is For
+---
+
+## 🎯 What This Project Is For
 
 This GitHub repository was created to accompany the professional development session *Building Free-Form Data Pipelines for Human-AI Conversations in Surveys*, delivered at the SPSP 2026 Annual Convention in Chicago, IL. The project supports the workshop by providing a concrete, runnable example of how free-form human–AI conversations can be embedded in surveys and logged through a flexible data pipeline. It also serves as a take-home guide for implementing similar projects in the future.
 
