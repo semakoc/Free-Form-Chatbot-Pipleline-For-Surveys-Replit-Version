@@ -10,7 +10,7 @@ This repository contains a lightweight, fully self‑contained web chatbot pipel
 
 ### Additional Information
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/Project-Structure" target="_blank">Project Structure</a> \
-<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/5.-Logs-&-Troubleshooting" target="_blank">Logs & Troubleshooting</a> \
+<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/Logs-&-Troubleshooting" target="_blank">Logs & Troubleshooting</a> \
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/5.-Logs-&-Troubleshooting" target="_blank">AWS Deployment</a>
 
 ---
