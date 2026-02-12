@@ -9,9 +9,10 @@ This repository contains a lightweight, fully self‑contained web chatbot pipel
 ## 📚 Documentation Directory
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/1.-Project-Structure" target="_blank">Section 1: Project Structure</a> \
 <a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/2.-Web-App-Deployment" target="_blank">Section 2: Deploying the Web App on Replit</a> \
-<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/3.-Environmental-Variables" target="_blank">Section 3: Embedding in Qualtrics</a> \
-<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/4.-Embedding-in-Qualtrics" target="_blank">Section 4: Logs & Troubleshooting</a> \
-<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/5.-Logs-&-Troubleshooting" target="_blank">Section 5: Extending this code to AWS</a>
+<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/3.-Environmental-Variables" target="_blank">Section 3: Environmental Variables</a> \
+<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/4.-Embedding-in-Qualtrics" target="_blank">Section 4: Embedding in Qualtrics</a> \
+<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/5.-Logs-&-Troubleshooting" target="_blank">Section 5: Logs & Troubleshooting</a>
+<a href="https://github.com/semakoc/Free-Form-Chatbot-Pipleline-For-Surveys/wiki/5.-Logs-&-Troubleshooting" target="_blank">Section 6: AWS Deployment</a>
 
 ---
 
