@@ -17,7 +17,7 @@ SYSTEM_PROMPT_TEMPLATE = (
     "Keep replies short (3–5 sentences)."
 )
 
-INITIAL_USER_INPUT_TEMPLATE = "Help me decide what I should do. {stimuli}" 
+INITIAL_USER_INPUT_TEMPLATE = "{stimuli} Prove me wrong." 
 
 # --- Flask setup (unchanged structure) ---
 app = Flask(__name__)
